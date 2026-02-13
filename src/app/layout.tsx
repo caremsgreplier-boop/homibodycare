@@ -8,6 +8,10 @@ import { FloatingWhatsappButton } from '@/components/floating-whatsapp-button'
 export const metadata: Metadata = {
   title: 'Homi Body Care Products',
   description: 'Natural and premium care products for your hair and body.',
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
