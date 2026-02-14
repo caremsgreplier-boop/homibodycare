@@ -28,29 +28,32 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         <div className="mb-8 self-start">
           <BackButton />
         </div>
-        <div className="max-w-md space-y-6">
-          <div className="relative aspect-square w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-xl opacity-50 grayscale">
+        <div className="max-w-2xl space-y-8">
+          <div className="relative aspect-square w-full max-w-md mx-auto overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/test.jpeg"
-              alt="Coming Soon"
+              src={product.image.imageUrl}
+              alt={product.name}
               fill
-              className="object-contain"
+              className="object-cover"
+              priority
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-background/40 backdrop-blur-sm">
-              <span className="bg-primary px-6 py-3 text-primary-foreground font-bold text-xl shadow-lg transform -rotate-12">
-                Coming Soon
-              </span>
+            <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] flex items-center justify-center">
+              <div className="bg-white/90 backdrop-blur-md px-8 py-4 rounded-full shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <span className="text-primary font-bold text-2xl tracking-wider">COMING SOON</span>
+              </div>
             </div>
           </div>
-          <h1 className="text-3xl font-bold">{product.name}</h1>
-          <p className="text-muted-foreground text-lg">
-            We are working hard to bring this product to you. Stay tuned for the launch of our new {product.name}!
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button asChild variant="outline">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold font-headline">{product.name}</h1>
+            <p className="text-muted-foreground text-xl max-w-lg mx-auto leading-relaxed">
+              We're perfecting our {product.name.toLowerCase()} to ensure it meets our highest standards of natural quality. Be the first to know when it launches!
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
                <Link href="/products">Back to Products</Link>
             </Button>
-            <Button asChild>
+            <Button asChild size="lg" className="rounded-full px-8 shadow-lg hover:shadow-xl transition-all">
                <Link href="/contact">Notify Me</Link>
             </Button>
           </div>
@@ -72,7 +75,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 product.id === 'shampoo' ? '/shampo_main.webp' : 
                 product.id === 'body-soap' ? '/soap_main.webp' : 
                 product.id === 'hair-oil' ? '/oil_main.webp' : 
-                product.id === 'body-care' ? '/test.webp' :
                 product.image.imageUrl
               }
               alt={product.name}

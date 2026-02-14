@@ -4,47 +4,52 @@ import { LogoIcon } from "./logo-icon";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-secondary/50">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-2">
-            <Link href="/" className="flex items-center space-x-2 mb-2">
-              <LogoIcon className="h-6 w-6 text-primary" />
-              <span className="font-bold font-headline text-lg">Homi Body Care</span>
+    <footer className="border-t border-slate-100 bg-white">
+      <div className="container py-16 lg:py-24">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4 col-span-1 md:col-span-1">
+            <Link href="/" className="flex items-center space-x-2">
+              <LogoIcon className="h-8 w-8 text-primary" />
+              <span className="font-bold font-headline text-2xl tracking-tight text-slate-900">Homi</span>
             </Link>
-            <p className="text-sm text-muted-foreground">Natural care for a better you.</p>
+            <p className="text-base text-muted-foreground leading-relaxed max-w-xs">
+              Handcrafting the purest botanical essentials to nourish your body and soul with ancient wisdom.
+            </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 text-center md:col-span-2 md:grid-cols-3 md:text-left">
-            <div>
-              <h3 className="font-semibold mb-4">Shop</h3>
-              <ul className="space-y-2">
-                <li><Link href="/products" className="text-sm text-muted-foreground hover:text-primary">All Products</Link></li>
-                <li><Link href="/products/hair-oil" className="text-sm text-muted-foreground hover:text-primary">Hair oil</Link></li>
-                <li><Link href="/products/body-soap" className="text-sm text-muted-foreground hover:text-primary">Avocado soap</Link></li>
-                <li><Link href="/products/shampoo" className="text-sm text-muted-foreground hover:text-primary">Shampoo</Link></li>
-                <li><Link href="/products/body-care" className="text-sm text-muted-foreground hover:text-primary">Hydrating Body Care</Link></li>
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-3">
+            <div className="flex flex-col gap-4">
+              <h3 className="font-bold font-headline text-lg text-slate-900">Collection</h3>
+              <ul className="space-y-3">
+                <li><Link href="/products" className="text-muted-foreground hover:text-primary transition-colors">All Products</Link></li>
+                <li><Link href="/products/hair-oil" className="text-muted-foreground hover:text-primary transition-colors">Hair oil</Link></li>
+                <li><Link href="/products/body-soap" className="text-muted-foreground hover:text-primary transition-colors">Avocado soap</Link></li>
+                <li><Link href="/products/shampoo" className="text-muted-foreground hover:text-primary transition-colors">Shampoo</Link></li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">About</h3>
-              <ul className="space-y-2">
-                <li><Link href="/ourstory" className="text-sm text-muted-foreground hover:text-primary">Our Story</Link></li>
-                <li><Link href="/ingredients" className="text-sm text-muted-foreground hover:text-primary">Ingredients</Link></li>
-                <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
+            <div className="flex flex-col gap-4">
+              <h3 className="font-bold font-headline text-lg text-slate-900">Company</h3>
+              <ul className="space-y-3">
+                <li><Link href="/ourstory" className="text-muted-foreground hover:text-primary transition-colors">Our Story</Link></li>
+                <li><Link href="/ingredients" className="text-muted-foreground hover:text-primary transition-colors">Ingredients</Link></li>
+                <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</Link></li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">Follow Us</h3>
-              <ul className="space-y-2">
-                <li><Link href="https://www.instagram.com/homi_body_care_official?igsh=eXppc3JmZnRzYTJv" className="text-sm text-muted-foreground hover:text-primary">Instagram</Link></li>
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Facebook</Link></li>
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Twitter</Link></li>
+            <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
+              <h3 className="font-bold font-headline text-lg text-slate-900">Connect</h3>
+              <ul className="space-y-3">
+                <li><Link href="https://www.instagram.com/homi_body_care_official?igsh=eXppc3JmZnRzYTJv" className="text-muted-foreground hover:text-primary transition-colors">Instagram</Link></li>
+                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">Facebook</Link></li>
+                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">YouTube</Link></li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8">
-          <p className="text-center text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Homi Body Care Products. All Rights Reserved.</p>
+        <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Homi Body Care. Handcrafted with love.</p>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-xs text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

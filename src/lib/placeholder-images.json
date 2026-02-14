@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Minimal product mockups with soft shadows",
-      "imageUrl": "https://images.unsplash.com/photo-1664216294580-079bc527ae49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9kdWN0JTIwbW9ja3VwfGVufDB8fHx8MTc2OTQ0MjkxOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "product mockup"
+      "description": "Natural body care products with botanical elements",
+      "imageUrl": "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&q=80&w=1080",
+      "imageHint": "natural products"
     },
     {
       "id": "hair-oil",
@@ -26,8 +26,8 @@
     },
     {
       "id": "body-care",
-      "description": "A bottle of Homi Body Care body care lotion",
-      "imageUrl": "https://images.unsplash.com/photo-1643379856186-9b09d83a3e62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bG90aW9uJTIwYm90dGxlfGVufDB8fHx8MTc2OTM3Nzg2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Natural body care lotion in a premium bottle",
+      "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=1080",
       "imageHint": "lotion bottle"
     },
     {
