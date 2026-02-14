@@ -6,11 +6,43 @@ import { products } from "@/lib/data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BackButton } from "@/components/back-button"
 import { ProductPurchaseActions } from "@/components/product-purchase-actions"
+import { Metadata } from 'next'
 
 export async function generateStaticParams() {
   return products.map((product) => ({
     id: product.id,
   }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+  const product = products.find((p) => p.id === id)
+
+  if (!product) {
+    return {
+      title: 'Product Not Found',
+    }
+  }
+
+  return {
+    title: `${product.name} | Homi Body Care`,
+    description: product.description,
+    alternates: {
+      canonical: `/products/${product.id}`,
+    },
+    openGraph: {
+      title: `${product.name} | Homi Body Care`,
+      description: product.description,
+      images: [
+        {
+          url: product.image.imageUrl,
+          width: 800,
+          height: 800,
+          alt: product.name,
+        },
+      ],
+    },
+  }
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {

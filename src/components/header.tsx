@@ -21,6 +21,8 @@ import { LogoIcon } from "./logo-icon"
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
+  { href: "/ourstory", label: "Our Story" },
+  { href: "/ingredients", label: "Ingredients" },
   { href: "/contact", label: "Contact Us" },
 ]
 
@@ -49,15 +51,15 @@ export function Header() {
   }, [])
 
   const NavLinks = ({ className, linkClassName, onNavClick }: { className?: string; linkClassName?: string; onNavClick?: () => void }) => (
-    <nav className={cn("flex items-center gap-8", className)}>
+    <nav className={cn("flex items-center gap-6 md:gap-8", className)}>
       {navLinks.map((link) => (
         <Link
           key={link.href}
           href={link.href}
           onClick={onNavClick}
           className={cn(
-            "group relative py-1 text-sm font-medium uppercase tracking-widest transition-colors hover:text-primary",
-            pathname === link.href ? "text-primary" : "text-muted-foreground",
+            "group relative py-1 px-3 text-sm font-headline uppercase tracking-widest rounded-full transition-all hover:bg-primary/10 hover:text-primary",
+            pathname === link.href ? "text-primary bg-primary/10 shadow-sm" : "text-muted-foreground",
             linkClassName
           )}
         >

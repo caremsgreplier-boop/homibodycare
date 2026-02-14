@@ -5,7 +5,7 @@ import { LogoIcon } from "./logo-icon";
 export function Footer() {
   return (
     <footer className="border-t border-slate-100 bg-white">
-      <div className="container py-16 lg:py-24">
+      <div className="container px-6 md:px-8 py-16 lg:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4 col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2">
@@ -16,8 +16,8 @@ export function Footer() {
               Handcrafting the purest botanical essentials to nourish your body and soul with ancient wisdom.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-3">
-            <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:col-span-3 place-items-center md:place-items-start">
+            <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left">
               <h3 className="font-bold font-headline text-lg text-slate-900">Collection</h3>
               <ul className="space-y-3">
                 <li><Link href="/products" className="text-muted-foreground hover:text-primary transition-colors">All Products</Link></li>
@@ -26,7 +26,7 @@ export function Footer() {
                 <li><Link href="/products/shampoo" className="text-muted-foreground hover:text-primary transition-colors">Shampoo</Link></li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left">
               <h3 className="font-bold font-headline text-lg text-slate-900">Company</h3>
               <ul className="space-y-3">
                 <li><Link href="/ourstory" className="text-muted-foreground hover:text-primary transition-colors">Our Story</Link></li>
@@ -34,7 +34,7 @@ export function Footer() {
                 <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</Link></li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
+            <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left">
               <h3 className="font-bold font-headline text-lg text-slate-900">Connect</h3>
               <ul className="space-y-3">
                 <li><Link href="https://www.instagram.com/homi_body_care_official?igsh=eXppc3JmZnRzYTJv" className="text-muted-foreground hover:text-primary transition-colors">Instagram</Link></li>

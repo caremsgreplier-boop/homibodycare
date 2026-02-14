@@ -1,24 +1,42 @@
 import { MetadataRoute } from 'next'
+import { products } from '@/lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const baseUrl = 'https://homibodycare.shop'
+
+  const staticPages: MetadataRoute.Sitemap = [
     {
-      url: 'https://homibodycare.shop',
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
     },
     {
-      url: 'https://homibodycare.shop/about',
+      url: `${baseUrl}/products`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://homibodycare.shop/contact',
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
   ]
+
+  const productPages: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${baseUrl}/products/${product.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }))
+
+  return [...staticPages, ...productPages]
 }

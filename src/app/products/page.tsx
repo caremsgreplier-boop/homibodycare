@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { products } from "@/lib/data"
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { BackButton } from "@/components/back-button"
 
 import { cn } from "@/lib/utils"
@@ -25,7 +26,7 @@ export default function ProductsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
           {products.map((product) => (
             <Card key={product.id} className="group relative overflow-hidden border-none shadow-none bg-transparent transition-all duration-500">
-              <Link href={`/products/${product.id}`} className="block">
+              <div>
                 <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-white transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10 border border-slate-100/50">
                   <Image
                     src={
@@ -64,7 +65,12 @@ export default function ProductsPage() {
                     <span className="text-sm font-medium text-primary uppercase tracking-wider">Launch Pending</span>
                   )}
                 </div>
-              </Link>
+                <div className="px-2 pb-4">
+                  <Button asChild variant="outline" size="lg" className="w-full h-12 rounded-full">
+                    <Link href={`/products/${product.id}`}>View Details</Link>
+                  </Button>
+                </div>
+              </div>
             </Card>
           ))}
         </div>

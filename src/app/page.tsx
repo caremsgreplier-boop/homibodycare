@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       {/* Hero Section */}
-      <section className="relative w-full py-10 md:py-16 lg:py-20 bg-[#FDFBF7] overflow-hidden">
+      <section className="relative w-full py-12 md:py-16 lg:py-20 bg-[#FDFBF7] overflow-hidden">
         {/* Advanced Decorative Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/5 rounded-full blur-[120px] opacity-60" />
@@ -31,7 +31,7 @@ export default function Home() {
                   <Leaf className="h-4 w-4" />
                   <span>Handcrafted with Pure Intentions</span>
                 </div>
-                <h1 className="text-5xl font-bold tracking-tight sm:text-7xl xl:text-8xl/none font-headline text-slate-900 animate-in fade-in slide-in-from-bottom-4 duration-1000 leading-[1.05]">
+                <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl xl:text-8xl/none font-headline text-slate-900 animate-in fade-in slide-in-from-bottom-4 duration-1000 leading-[1.05]">
                   Pure Care for Your <br />
                   <span className="text-primary italic font-serif">Natural</span> Radiance
                 </h1>
@@ -40,11 +40,11 @@ export default function Home() {
                   Experience the luxury of 100% organic, handcrafted essentials.
                 </p>
               </div>
-              <div className="flex flex-col gap-3 min-[400px]:flex-row animate-in fade-in slide-in-from-bottom-6 duration-1000">
-                <Button asChild size="lg" className="h-14 px-10 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-primary/20 bg-primary hover:bg-primary/90">
+              <div className="flex flex-col gap-3 md:flex-row animate-in fade-in slide-in-from-bottom-6 duration-1000">
+                <Button asChild size="lg" className="w-full md:w-auto h-14 px-10 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-primary/20 bg-primary hover:bg-primary/90">
                   <Link href="/products">Explore Collection</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="h-14 px-10 rounded-full border-2 text-lg font-medium transition-all duration-300 hover:scale-105 bg-transparent border-primary/20 hover:border-primary text-primary">
+                <Button asChild size="lg" variant="outline" className="w-full md:w-auto h-14 px-10 rounded-full border-2 text-lg font-medium transition-all duration-300 hover:scale-105 bg-transparent border-primary/20 hover:border-primary text-primary">
                   <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -54,10 +54,10 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-24 bg-white border-y border-slate-100">
+      <section className="w-full py-12 md:py-24 bg-white border-y border-slate-100">
         <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-            <div className="group flex flex-col items-center text-center space-y-4 p-8 rounded-3xl transition-all duration-500 hover:bg-[#FDFBF7]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+            <div className="group flex flex-col items-center text-center space-y-4 p-6 md:p-8 rounded-3xl transition-all duration-500 hover:bg-[#FDFBF7]">
               <div className="rounded-2xl bg-primary/5 p-5 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10">
                 <Leaf className="h-10 w-10 text-primary" />
               </div>
@@ -66,7 +66,7 @@ export default function Home() {
                 We source only the finest certified organic ingredients, ensuring every drop is as pure as nature intended.
               </p>
             </div>
-            <div className="group flex flex-col items-center text-center space-y-4 p-8 rounded-3xl transition-all duration-500 hover:bg-[#FDFBF7]">
+            <div className="group flex flex-col items-center text-center space-y-4 p-6 md:p-8 rounded-3xl transition-all duration-500 hover:bg-[#FDFBF7]">
               <div className="rounded-2xl bg-primary/5 p-5 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10">
                 <Droplets className="h-10 w-10 text-primary" />
               </div>
@@ -75,7 +75,7 @@ export default function Home() {
                 Rich in antioxidants and essential fatty acids, our formulas penetrate deeply to rejuvenate and protect.
               </p>
             </div>
-            <div className="group flex flex-col items-center text-center space-y-4 p-8 rounded-3xl transition-all duration-500 hover:bg-[#FDFBF7]">
+            <div className="group flex flex-col items-center text-center space-y-4 p-6 md:p-8 rounded-3xl transition-all duration-500 hover:bg-[#FDFBF7]">
               <div className="rounded-2xl bg-primary/5 p-5 transition-transform duration-500 group-hover:scale-110 group-hover:bg-primary/10">
                 <Globe className="h-10 w-10 text-primary" />
               </div>
@@ -91,20 +91,20 @@ export default function Home() {
       {/* Philosophy Section removed */}
 
       {/* Featured Products Section */}
-      <section className="w-full py-24 bg-white">
+      <section className="w-full py-12 md:py-24 bg-white">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-6 text-center mb-16">
+          <div className="flex flex-col items-center justify-center space-y-6 text-center mb-10 md:mb-16">
             <div className="space-y-3">
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">Signature Essentials</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight sm:text-5xl font-headline">Signature Essentials</h2>
               <p className="max-w-[700px] text-muted-foreground text-lg md:text-xl mx-auto">
                 Elevate your daily ritual with our most-loved botanical creations.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
             {products.slice(0, 4).map((product) => (
               <Card key={product.id} className="group relative overflow-hidden border-none shadow-none bg-transparent transition-all duration-500">
-                <Link href={`/products/${product.id}`} className="block">
+                <div>
                   <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-slate-50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10">
                     <Image
                       src={
@@ -115,7 +115,7 @@ export default function Home() {
                       }
                       alt={product.name}
                       fill
-                      className="object-contain p-8 transition-transform duration-700 group-hover:scale-110"
+                      className="object-contain p-6 md:p-8 transition-transform duration-700 group-hover:scale-110"
                     />
                     {product.id === 'body-care' && (
                       <div className="absolute top-6 right-6">
@@ -143,11 +143,16 @@ export default function Home() {
                       <span className="text-sm font-medium text-primary uppercase tracking-wider">Launch Pending</span>
                     )}
                   </CardFooter>
-                </Link>
+                  <div className="px-2 pb-4">
+                    <Button asChild variant="outline" size="lg" className="w-full h-12 rounded-full">
+                      <Link href={`/products/${product.id}`}>View Details</Link>
+                    </Button>
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
-          <div className="mt-16 text-center">
+          <div className="mt-10 md:mt-16 text-center">
             <Button asChild variant="ghost" className="group text-primary font-bold text-lg hover:bg-transparent p-0">
               <Link href="/products" className="flex items-center gap-2">
                 View All Products 
@@ -159,10 +164,10 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-full py-24 bg-[#FDFBF7]">
+      <section className="w-full py-12 md:py-24 bg-[#FDFBF7]">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-            <h2 className="text-4xl font-bold font-headline">Kind Words</h2>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">Kind Words</h2>
             <div className="w-20 h-1 bg-primary/20 rounded-full" />
           </div>
           <TestimonialCarousel testimonials={testimonials} />
