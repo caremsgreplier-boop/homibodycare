@@ -39,7 +39,7 @@ export function Footer() {
               <ul className="space-y-3">
                 <li><Link href="https://www.instagram.com/homi_body_care_official?igsh=eXppc3JmZnRzYTJv" className="text-muted-foreground hover:text-primary transition-colors">Instagram</Link></li>
                 <li><Link href="https://www.facebook.com/share/17FcqdyF7t/" className="text-muted-foreground hover:text-primary transition-colors">Facebook</Link></li>
-                <li><Link href="#" className="text-muted-foreground hover:text-primary transition-colors">YouTube</Link></li>
+                <li><Link href="https://x.com/MReplier11259" className="text-muted-foreground hover:text-primary transition-colors">x</Link></li>
               </ul>
             </div>
           </div>
