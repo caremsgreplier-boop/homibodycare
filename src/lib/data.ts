@@ -101,7 +101,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: '4',
-    name: 'gita bonam',
+    name: 'gita bunny',
     avatar: getImage('avatar-1')!,
     comment: 'The shampoo has done wonders for my dandruff problem. My scalp feels so clean and refreshed after every wash. Plus, my hair is much stronger now!',
     product: 'Shampoo',
