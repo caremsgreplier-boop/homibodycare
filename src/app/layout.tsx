@@ -32,17 +32,23 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-HVRPZQMJG6" strategy="afterInteractive" />
-        <Script id="ga4-init" strategy="afterInteractive">
+      </head>
+      <body className="font-body antialiased">
+        {/* Google Analytics 4 (GA4) - Measurement ID: G-HVRPZQMJG6 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HVRPZQMJG6"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-HVRPZQMJG6', { page_path: window.location.pathname });
+
+            gtag('config', 'G-HVRPZQMJG6');
           `}
         </Script>
-      </head>
-      <body className="font-body antialiased">
+
         <Header />
         <main>{children}</main>
         <Footer />
