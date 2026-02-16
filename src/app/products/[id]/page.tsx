@@ -127,7 +127,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             </div>
           )}
           <p className="text-muted-foreground text-lg mb-6">{product.description}</p>
-          
+
           <div className="mb-8">
             <ProductPurchaseActions product={product} />
           </div>

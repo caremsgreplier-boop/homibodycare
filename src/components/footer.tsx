@@ -22,7 +22,7 @@ export function Footer() {
               <ul className="space-y-3">
                 <li><Link href="/products" className="text-muted-foreground hover:text-primary transition-colors">All Products</Link></li>
                 <li><Link href="/products/hair-oil" className="text-muted-foreground hover:text-primary transition-colors">Hair oil</Link></li>
-                <li><Link href="/products/body-soap" className="text-muted-foreground hover:text-primary transition-colors">Avocado soap</Link></li>
+                <li><Link href="/products/body-soap" className="text-muted-foreground hover:text-primary transition-colors">Soap</Link></li>
                 <li><Link href="/products/shampoo" className="text-muted-foreground hover:text-primary transition-colors">Shampoo</Link></li>
               </ul>
             </div>

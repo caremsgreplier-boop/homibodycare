@@ -39,7 +39,15 @@ const addressSchema = z.object({
 
 type AddressFormValues = z.infer<typeof addressSchema>
 
-export function BuyNowFlow({ product, quantity = 1 }: { product: Product; quantity?: number }) {
+export function BuyNowFlow({
+  product,
+  quantity = 1,
+  variant,
+}: {
+  product: Product
+  quantity?: number
+  variant?: string
+}) {
   const { toast } = useToast()
   const [open, setOpen] = useState(false)
 
@@ -77,6 +85,7 @@ export function BuyNowFlow({ product, quantity = 1 }: { product: Product; quanti
       localStorage.setItem("shippingAddress", JSON.stringify(data))
       const order = {
         productName: product.name,
+        variant,
         price: product.price,
         quantity: safeQty,
         totalPrice: formatRupees(totalPrice),
@@ -90,9 +99,11 @@ export function BuyNowFlow({ product, quantity = 1 }: { product: Product; quanti
       console.error("Failed to save to local storage", error)
     }
 
+    const variantLine = variant ? `\nType: ${variant}` : ""
+
     const message = `Hi! I'd like to order the following product:
 
-Product: ${product.name}
+Product: ${product.name}${variantLine}
 Quantity: ${safeQty}
 Unit Price: ${product.price}
 Total: ${formatRupees(totalPrice)}
